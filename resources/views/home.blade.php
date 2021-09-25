@@ -1,5 +1,4 @@
 @extends('layouts.base')
-@section('title','Berita Rame')
 @section('container')
 
     {{-- <div class="container"> --}}

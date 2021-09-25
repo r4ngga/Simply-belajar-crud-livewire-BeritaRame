@@ -13,7 +13,7 @@ class Index extends Component
     {
         // $posts = Post::latest()->paginate(5);
         return view('livewire.index', [
-            'posts' => Post::latest()->paginate(5),
+            'posts' => Post::latest()->paginate(4),
             'limit_posts' => Post::latest()->take(5)->get(),
         ]);
     }
