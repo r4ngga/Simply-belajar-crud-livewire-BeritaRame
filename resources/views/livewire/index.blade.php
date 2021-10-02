@@ -8,7 +8,7 @@
                             <div class="ml-12 text-lg leading-7 font-semibold"> <a href="/{{$post->id}}"> {{$post->title}} </a> </div>
                         </div>
                         <div class="ml-12 text-md text-gray-700 dark:text-gray-600">created by {{$post->user->name}}</div>
-                        <div class="ml-12 text-sm text-gray-500 dark:text-gray-400">{{$post->created_at}} - {{$post->created_at->diffForHumans()}}</div>
+                        <div class="ml-12 text-sm text-gray-500 dark:text-gray-400">{{date('j F, Y', strtotime($post->created_at))}} - {{$post->created_at->diffForHumans()}}</div>
                         <div class="ml-12">
                             <div class="mt-2 text-lg">
                                 {{ Str::limit($post->content, 50)}} <a href="/{{$post->id}}" class="underline">read more</a>
@@ -35,11 +35,12 @@
                         <div class="flex flex-col p-2 my-2 ml-2 mr-2 overflow-hidden bg-white rounded-md shadow-lg">
                             <span class="mt-2 mb-4 ml-4 text-xl font-bold"><h1>Category (Coming Soon)</h1></span>
                             <ul class="list-none md:list-disc">
-                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="#">Political</a> </span></li>
-                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="#">Geography</a> </span></li>
-                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="#">Health</a> </span></li>
-                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="#">Foods</a> </span></li>
-                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="#">Sports</a> </span></li>
+                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="/category/Political">Political</a> </span></li>
+                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="/category/Economy">Economy</a> </span></li>
+                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="/category/Geography">Geography</a> </span></li>
+                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="/category/Health">Health</a> </span></li>
+                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="/category/Foods">Foods</a> </span></li>
+                                <li class="py-2"><span class="mt-4 ml-4 mr-2 text-sm"><a href="/category/Sports">Sports</a> </span></li>
                             </ul>
                         </div>
                     </div>

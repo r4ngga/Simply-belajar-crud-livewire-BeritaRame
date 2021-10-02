@@ -23,3 +23,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 Route::get('/{id}', App\Http\Livewire\ShowPost::class); //livewire vers 2.x
+// Route::get('/category/{category}', App\Http\Livewire\ShowByCategory::class);
+Route::get('/category/{category}', App\Http\Livewire\ShowByCategory::class);

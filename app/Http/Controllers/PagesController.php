@@ -13,4 +13,8 @@ class PagesController extends Controller
         return view('home', compact('posts'));
         // $posts = Post::all();
     }
+
+    public function showbycategory()
+    {
+    }
 }

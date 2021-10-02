@@ -6,7 +6,7 @@
         <span class="text-md ml-4">created by {{$post->user->name}}</span>
         {{-- {{$post->user->name}} --}}
         <span class="text-gray-500 text-sm ml-4"> {{$post->created_at->diffForHumans()}}</span>
-        <br/>
+        <span class="text-gray-600 text-md font-bold ml-4">Category : {{$post->category}}</span>
         <p class="ml-4">{{$post->content}} </p>
         <br/>
         <div >
@@ -47,6 +47,22 @@
               <textarea wire:model='content' id="about" name="about" rows="4" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder=""></textarea>
             </div>
           </div>
+
+            <div>
+                <label for="category" class="block text-sm font-medium text-gray-700">
+                  Category
+                </label>
+                <div class="mt-1">
+                <select wire:model='category' id="category" name="category" autocomplete="category" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  <option>Political</option>
+                  <option>Economy</option>
+                  <option>Geography</option>
+                  <option>Health</option>
+                  <option>Foods</option>
+                  <option>Sports</option>
+                </select>
+                </div>
+            </div>
 
         </div>
         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">

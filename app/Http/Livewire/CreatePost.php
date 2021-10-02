@@ -10,6 +10,7 @@ class CreatePost extends Component
 {
     public $content;
     public $title;
+    public $category;
     public function render()
     {
         return view('livewire.create-post');
@@ -20,7 +21,8 @@ class CreatePost extends Component
         Post::create([
             'user_id' => Auth::id(),
             'title' => $this->title,
-            'content' => $this->content
+            'content' => $this->content,
+            'category' => $this->category
         ]);
         $this->title = "";
         $this->content = "";
